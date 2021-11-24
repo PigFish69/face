@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Face</title>
+    <link rel="stylesheet" href="tijd%20face%20face%20face%20face.css" type="text/css">
+
+</head>
+<body>
+<div class="mainback">
+
+<div id="background" class="back2">
+    <div id="header" class="header"></div>
+    <form id="formId">
+        <div id="vertrek" class="vertrek">
+
+            Depart time: <input class="input" id="vertrekInput" type="text" name="vertrekTijd">
+
+        </div>
+        <div id="aankomst" class="aankomst">
+
+            Arrival time: <input class="input" id="aankomstInput" type="text" name="aankomstTijd">
+        </div>
+
+        <div id="resultaatUur" class="resultaat1">
+            Uur:
+        </div>
+        <div id="resultaatMinuut" class="resultaat2">
+            Min:
+        </div>
+        <div id="buttons" class="buttons">
+            <input class="input" type="button" onclick="calculateUurMin()" value="Calculate">
+        </div>
+
+    </form>
+</div>
+
+<div id="background2" class="back">
+    <header>Tijd optellen/aftrekken</header>
+    <div id="header2" class="header2"></div>
+    <form id="formTijdOptellen">
+        <div id="tijdLeft" class="tijdLeft">
+            <input class="input2" id="tijd1" type="text" name="tijd1">
+        </div>
+        <div id="keuze" class="keuze">
+            <select id="plusMin" name="plusMin">
+                <option value="plus">+</option>
+                <option value="min">-</option>
+            </select>
+        </div>
+        <div id="tijdRight" class="tijdRight">
+            <input class="input2" id="tijd2" type="text" name="tijd2">
+        </div>
+        <div id="rekenUit">
+            <input class="input2" type="button" onclick="tijdSom()" value="=">
+        </div>
+        <div id="minuut" class="resultaat1">
+            Min:
+        </div>
+        <div id="uur" class="resultaat2">
+            Hour:
+        </div>
+        <div id="dag" class="dag">
+            Day:
+        </div>
+
+    </form>
+</div>
+    <section class="leeg">
+
+    </section>
+    <footer class="divFace">
+        <a class="buttonFace" href="https://cornhub.website/">Face</a>
+    </footer>
+</div>
+<script>
+function calculateUurMin()
+{
+    let vertrekTijd = document.getElementById("vertrekInput").value; //vertrek tijd input
+    let aankomstTijd = document.getElementById("aankomstInput").value; //aankomst tijd input
+
+    let vertrekArray = vertrekTijd.split(":");  //vertrektijd splitten in uren/min
+        let vertrekUur = vertrekArray[0];
+        let vertrekMinuut = vertrekArray[1];
+
+    let aankomstArray = aankomstTijd.split(":");    //aankomsttijd splitten in uren/min
+        let aankomstUur = aankomstArray[0];
+        let aankomstMinuut = aankomstArray[1];
+
+    let tijdelijkUur = 0; //uur tijdelijk opslaan, later mee rekenen
+
+    let resultaatMinuut = aankomstMinuut-vertrekMinuut; //uitkomst minuten
+    if (resultaatMinuut<0)
+    {
+        tijdelijkUur--;
+        resultaatMinuut=resultaatMinuut+60;
+    }
+
+    let resultaatUur = aankomstUur-vertrekUur+tijdelijkUur; //uitkomst uren
+    if (resultaatUur<0)
+    {
+        resultaatUur=resultaatUur+24;
+    }
+
+    document.getElementById("resultaatUur").innerHTML = 'Hour: '+resultaatUur;
+    document.getElementById("resultaatMinuut").innerHTML = 'min: '+resultaatMinuut;
+}
+function tijdSom()
+{
+    let tijdLeft = document.getElementById("tijd1").value;
+    let tijdRight = document.getElementById("tijd2").value;
+
+    let tijd1Array = tijdLeft.split(":");
+    let tijd1Uur = parseInt(tijd1Array[0]);
+    let tijd1Minuut = parseInt(tijd1Array[1]);
+
+    let tijd2Array = tijdRight.split(":");
+    let tijd2Uur = parseInt(tijd2Array[0]);
+    let tijd2Minuut = parseInt(tijd2Array[1]);
+
+    let tijdelijkUur=0;
+    let totaalDagen=0;
+    let totaalMinuut=0;
+    let totaalUur=0;
+    if (document.getElementById('plusMin').value === 'plus')
+    {
+        totaalMinuut=tijd1Minuut+tijd2Minuut;
+        if (totaalMinuut>60)
+        {
+            tijdelijkUur++
+            totaalMinuut=totaalMinuut-60;
+        }
+
+        totaalUur=tijd1Uur+tijd2Uur+tijdelijkUur;
+
+        if (totaalUur>24)
+        {
+            totaalUur=totaalUur-24;
+            totaalDagen++;
+        }
+    } else if (document.getElementById('plusMin').value === 'min')
+    {
+        totaalMinuut=tijd1Minuut-tijd2Minuut;
+        if (totaalMinuut<0)
+        {
+            tijdelijkUur--
+            totaalMinuut=totaalMinuut+60;
+        }
+
+        totaalUur=tijd1Uur-tijd2Uur+tijdelijkUur;
+
+    }
+    console.log(document.getElementById('plusMin').value);
+
+    document.getElementById("minuut").innerHTML = 'Min: '+totaalMinuut;
+    document.getElementById("uur").innerHTML = 'Hour: '+totaalUur;
+    document.getElementById("dag").innerHTML = 'Day: '+totaalDagen;
+
+}
+function face()
+{
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+
+body {
+    margin: 0;
+    background-color: grey;
+}
+.mainback {
+    margin: 0 auto;
+    background-image: url("images/gintamaGang.jpg");
+    background-repeat: no-repeat;
+    border: 5px solid black;
+    width: 1140px;
+    height: 570px;
+
+}
+.back {
+    background-image: url("images/neo armstrong cyclone jet armstrong cannon.png");
+    width: 595px;
+    height: 100px;
+    border: solid black 3px;
+    margin: 0 auto;
+}
+.back2 {
+    background-image: url("images/neo armstrong cyclone jet armstrong cannon2.png");
+    width: 595px;
+    height: 100px;
+    border: solid black 3px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.leeg {
+    width: 1140px;
+    height: 318px;
+}
+.divFace {
+    width: 1140px;
+    height: 30px;
+}
+.buttonFace {
+    width: 50px;
+    background-color: dodgerblue;
+    margin-top: 300px;
+    margin-left: 400px;
+    margin-bottom: 0;
+    border-collapse: collapse;
+    border-color: dodgerblue;
+    text-decoration: none;
+}
+.header {
+    width: 540px;
+    height: 20px;
+}
+.vertrek {
+    background-color: orange;
+    margin-left: 20px;
+    padding: 5px 10px 5px 10px;
+    border: solid black 1px;
+    float: left;
+    width: 135px;
+}
+.aankomst {
+    float: left;
+    width: 152px;
+    background-color: orange;
+    border: solid black 1px;
+    padding: 5px 10px 5px 10px;
+}
+.resultaat1 {
+    float: left;
+    width: 70px;
+    background-color: orange;
+    padding: 5px 10px 5px 10px;
+
+    border-left: solid black 1px;
+    border-top: solid black 1px;
+    border-bottom: solid black 1px;
+}
+.resultaat2 {
+    float: left;
+    width: 75px;
+    background-color: orange;
+    padding: 5px 10px 5px 10px;
+
+    border-right: solid black 1px;
+    border-top: solid black 1px;
+    border-bottom: solid black 1px;
+}
+.buttons {
+    float: left;
+    height: 30px;
+    width: 540px;
+    margin-left: 20px;
+}
+.input {
+    width: 29.2%;
+
+}
+header {
+    margin-top: 4px;
+    margin-left: 210px;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    background-color: orange;
+    border: solid black 1px;
+    float: left;
+}
+.header2 {
+    height: 38.5px;
+    width: 540px;
+}
+.tijdLeft {
+    float: left;
+    width: 60px;
+    background-color: orange;
+    border: solid black 1px;
+    padding: 5px 10px 5px 10px;
+    margin-left: 50px;
+}
+.input2 {
+    width: 50px;
+    float: left;
+}
+.tijdRight {
+    float: left;
+    width: 60px;
+    background-color: orange;
+    border: solid black 1px;
+    padding: 5px 10px 5px 10px;
+
+}
+.keuze {
+    float: left;
+}
+.dag {
+    float: left;
+    width: 50px;
+    background-color: orange;
+    padding: 5px 10px 5px 10px;
+
+    border-right: solid black 1px;
+    border-top: solid black 1px;
+    border-bottom: solid black 1px;
+}
