@@ -5,7 +5,7 @@ body {
 }
 .mainback {
     margin: 0 auto;
-    background-image: url("images/gintamaGang.jpg");
+    background-image: url("gintamaGang.jpg");
     background-repeat: no-repeat;
     border: 5px solid black;
     width: 1140px;
@@ -13,14 +13,14 @@ body {
 
 }
 .back {
-    background-image: url("images/neo armstrong cyclone jet armstrong cannon.png");
+    background-image: url("neo armstrong cyclone jet armstrong cannon.png");
     width: 595px;
     height: 100px;
     border: solid black 3px;
     margin: 0 auto;
 }
 .back2 {
-    background-image: url("images/neo armstrong cyclone jet armstrong cannon2.png");
+    background-image: url("neo armstrong cyclone jet armstrong cannon2.png");
     width: 595px;
     height: 100px;
     border: solid black 3px;
